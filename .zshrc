@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 POWERLEVEL9K_MODE='nerdfont-complete'
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user host dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs root_indicator background_jobs command_execution_time)
 #POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 #POWERLEVEL9K_SHORTEN_DELIMITER=""
