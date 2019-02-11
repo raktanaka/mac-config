@@ -588,8 +588,8 @@ colorscheme hybrid
 " endif
 
 if has('gui_running')
-	set guifont=Source\ Code\ Pro\ Regular\ 10
-	set lines=50 columns=120
+	set guifont=Hack\ Regular\ Nerd\ Font\ Complete:h12
+	set lines=60 columns=125
 endif
 
 " NERDTree size
