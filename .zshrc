@@ -120,5 +120,6 @@ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 
+path+=/Users/raktanaka/Library/Android/sdk/platform-tools/
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
