@@ -9,7 +9,7 @@
 "                You can find me on Github: http://github.com/jdavis Or my
 "                personal site: http://joshldavis.com
 
-" **Must be first uncommented line**
+ " **Must be first uncommented line**
 set nocompatible
 filetype off
 
@@ -232,23 +232,27 @@ vmap s j
 vmap d l
 
 " Walking around
-nmap <C-up> 20k10j
-nmap <C-down> 20j10k
-nmap <C-left> ^
-nmap <C-right> w
-nmap <S-left> 0
-nmap <S-right> $
-nmap <S-up> gg
-nmap <S-down> G
+nmap <S-up> 20k10j
+nmap <S-down> 20j10k
+"nmap <C-up> 20k10j
+"nmap <C-down> 20j10k
+"nmap <C-left> ^
+"nmap <C-right> w
+"nmap <S-left> 0
+"nmap <S-right> $
+"nmap <S-up> gg
+"nmap <S-down> G
 "
-imap <C-up> <Esc>20k10ji
-imap <C-down> <Esc>20j10ki
-imap <C-left> <Esc>^i
-imap <C-right> <Esc>wi<right>
-imap <S-right> <Esc>$i<right>
-imap <S-left> <Esc>0i
-imap <S-up> <Esc>ggi
-imap <S-down> <Esc>Gi
+imap <S-up> <Esc>20k10ji
+imap <S-down> <Esc>20j10ki
+"imap <C-up> <Esc>20k10ji
+"imap <C-down> <Esc>20j10ki
+"imap <C-left> <Esc>^i
+"imap <C-right> <Esc>wi<right>
+"imap <S-right> <Esc>$i<right>
+"imap <S-left> <Esc>0i
+"imap <S-up> <Esc>ggi
+"imap <S-down> <Esc>Gi
 "
 vmap <C-up> 20k10j
 vmap <C-down> 20j10k
