@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -76,8 +78,12 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
+        osx
+	    git
         docker
+        docker-compose
+        pyenv
+        rbenv
         )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,13 +120,20 @@ ZLE_RPROMPT_INDENT=0
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# pyenv shim
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+# Named Directories
+hash -d icloud=~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents
 
+# https://github.com/pyenv/pyenv/issues/106
+# Brew and pyenv install conflicting Python. This makes brew use its own Python
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+
+# The plugins solve those
+# pyenv shim
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
 # rbenv shim
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 # iTerm2 full shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
