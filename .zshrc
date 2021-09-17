@@ -83,7 +83,6 @@ plugins=(
         docker
         docker-compose
         pyenv
-        rbenv
         )
 
 source $ZSH/oh-my-zsh.sh
